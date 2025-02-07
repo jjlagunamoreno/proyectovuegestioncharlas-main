@@ -829,7 +829,7 @@ export default {
 .btn-abrirModalRonda {
   margin-left: 10px;
   font-size: 20px;
-  color: #4b57d2;
+  color: #4651c5;
 }
 .btn-abrirModalRonda:hover {
   cursor: pointer;
@@ -1069,7 +1069,7 @@ export default {
 }
 
 .comment-count {
-  background-color: #4B57D2;
+  background-color: #4651c5;
   color: white;
   font-size: 12px;
   font-weight: bold;
@@ -1089,7 +1089,7 @@ export default {
 }
 
 .count-badge {
-  background-color: #4b57d2;
+  background-color: #4651c5;
   color: white;
   font-size: 12px;
   font-weight: bold;
@@ -1106,5 +1106,9 @@ export default {
 .custom-button-detalles.active .count-badge {
   background-color: white;
   color: #494949;
+}
+
+.custom-button-detalles.active {
+  background-color: #527a5899;
 }
 </style>
