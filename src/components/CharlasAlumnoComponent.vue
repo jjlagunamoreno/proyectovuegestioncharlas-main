@@ -71,8 +71,7 @@
 
     <!-- Modal para mostrar los detalles de la charla -->
     <div
-      v-if="modalVisible"
-      @click.self="cerrarModal"
+      v-if="modalVisible" @click.self="cerrarModal"
       class="modal fade show"
       tabindex="-1"
       role="dialog"
@@ -103,7 +102,7 @@
             <!-- Botones para cambiar entre Descripción, Comentarios y Recursos -->
             <div class="d-flex custom-buttons-container">
               <button
-                class="custom-button"
+                class="custom-button me-3"
                 @click="
                   mostrarDescripcion = !mostrarDescripcion;
                   mostrarComentarios = false;
@@ -213,13 +212,13 @@
                   >
                     <div class="recurso-header">
                       <h6 class="recurso-title">{{ recurso.nombre }}</h6>
-                      <a
-                        :href="recurso.url"
+                      <router-link
+                        :to="recurso.url"
                         target="_blank"
                         class="recurso-link"
                       >
                         <i class="fa-solid fa-link"></i> Ver Recurso
-                      </a>
+                      </router-link>
                       <!-- Botón de editar -->
                       <button
                         @click="editarRecurso(recurso)"
@@ -865,14 +864,14 @@ export default {
 }
 
 /* BOTONES DETALLES CONTADOR COMENTARIOS Y RECURSOS */
-.custom-button {
+.custom-button-detalles {
   display: flex;
   align-items: center;
   gap: 8px; /* Espaciado entre icono, texto y contador */
 }
 
 .comment-count {
-  background-color: #4b57d2;
+  background-color: #4B57D2;
   color: white;
   font-size: 12px;
   font-weight: bold;
@@ -886,7 +885,7 @@ export default {
 }
 
 /* Cambia el color del contador cuando el botón está activo */
-.custom-button.active .comment-count {
+.custom-button-detalles.active .comment-count {
   background-color: white;
   color: #494949;
 }
@@ -906,7 +905,7 @@ export default {
 }
 
 /* Cambia el color del contador cuando el botón está activo */
-.custom-button.active .count-badge {
+.custom-button-detalles.active .count-badge {
   background-color: white;
   color: #494949;
 }
