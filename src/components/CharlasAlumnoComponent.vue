@@ -71,7 +71,8 @@
 
     <!-- Modal para mostrar los detalles de la charla -->
     <div
-      v-if="modalVisible" @click.self="cerrarModal"
+      v-if="modalVisible"
+      @click.self="cerrarModal"
       class="modal fade show"
       tabindex="-1"
       role="dialog"
@@ -102,7 +103,7 @@
             <!-- Botones para cambiar entre Descripción, Comentarios y Recursos -->
             <div class="d-flex custom-buttons-container">
               <button
-                class="custom-button me-3"
+                class="custom-button"
                 @click="
                   mostrarDescripcion = !mostrarDescripcion;
                   mostrarComentarios = false;
@@ -851,6 +852,18 @@ export default {
   margin-top: 10px;
 }
 
+.custom-buttons-container {
+  display: flex;
+  /* Usamos flex para alinear los botones */
+  align-items: center;
+  /* Centrado vertical */
+  justify-content: flex-start;
+  /* Alineación a la izquierda */
+  gap: 15px;
+  /* Espaciado entre botones */
+  margin-top: 25px;
+}
+
 /* BOTONES DETALLES CONTADOR COMENTARIOS Y RECURSOS */
 .custom-button {
   display: flex;
@@ -859,7 +872,7 @@ export default {
 }
 
 .comment-count {
-  background-color: #4B57D2;
+  background-color: #4b57d2;
   color: white;
   font-size: 12px;
   font-weight: bold;
@@ -875,7 +888,7 @@ export default {
 /* Cambia el color del contador cuando el botón está activo */
 .custom-button.active .comment-count {
   background-color: white;
-  color: #4B57D2;
+  color: #494949;
 }
 
 .count-badge {
@@ -895,6 +908,6 @@ export default {
 /* Cambia el color del contador cuando el botón está activo */
 .custom-button.active .count-badge {
   background-color: white;
-  color: #4b57d2;
+  color: #494949;
 }
 </style>

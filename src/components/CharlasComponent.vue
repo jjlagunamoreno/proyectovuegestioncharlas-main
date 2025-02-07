@@ -1205,7 +1205,7 @@ export default {
 /* Cambia el color del contador cuando el botón está activo */
 .custom-button.active .comment-count {
   background-color: white;
-  color: #4B57D2;
+  color: #494949;
 }
 
 .count-badge {
@@ -1225,6 +1225,6 @@ export default {
 /* Cambia el color del contador cuando el botón está activo */
 .custom-button.active .count-badge {
   background-color: white;
-  color: #4b57d2;
+  color: #494949;
 }
 </style>
